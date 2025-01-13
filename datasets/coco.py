@@ -626,11 +626,11 @@ def build(image_set, args):
     
     if args.dataset_file == 'aitod_v2':
         PATHS = {
-            "train": (root / "images/train", root / "annotations" / 'aitodv2_train.json'),
-            "trainval": (root / "images/trainval", root / "annotations" / 'aitodv2_trainval.json'),
-            "val": (root / "images/val", root / "annotations" / 'aitodv2_val.json'),
-            "eval_debug": (root / "images/val", root / "annotations" / 'aitodv2_val.json'),
-            "test": (root / "images/test", root / "annotations" / 'aitodv2_test.json' ),
+            "train": ("/kaggle/input/dronodatdatasetesod", "/kaggle/working/train_annotations.json"),
+            "trainval": ("/kaggle/input/dronodatdatasetesod", "/kaggle/working/val_annotations.json"),
+            "val": ("/kaggle/input/dronodatdatasetesod", "/kaggle/working/val_annotations.json"),
+            "eval_debug": ("/kaggle/input/dronodatdatasetesod", "/kaggle/working/val_annotations.json"),
+            "test": ("/kaggle/input/dronodatdatasetesod", "/kaggle/working/val_annotations.json" ),
         }
 
     # add some hooks to datasets
